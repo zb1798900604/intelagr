@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.intelagr.mapper.SeedCPLTMapper">
+	<resultMap type="SeedCPLT" id="seedCPLTMapper">
+		<id column="id" property="id" />
+		<result column="companyCode" property="companyCode" />
+		<result column="complaintDate" property="complaintDate" />
+		<result column="buySeedsDate" property="buySeedsDate" />
+		<result column="complainant" property="complainant" />
+		<result column="complainantSex" property="complainantSex" />
+		<result column="complainantTel" property="complainantTel" />
+		<result column="complainantMail" property="complainantMail" />
+		<result column="complaintContent" property="complaintContent" />
+		<result column="settleStatus" property="settleStatus"/>
+		<result column="processMode" property="processMode"/>
+		<result column="processResult" property="processResult"/>
+		<result column="productionWeight" property="productionWeight"/>
+		<result column="blackListTimeLimit" property="blackListTimeLimit"/>
+		<result column="blackListEndDate" property="blackListEndDate"/>
+		<result column="settleDate" property="settleDate"/>
+		<result column="processor" property="processor"/>
+		<result column="processorsTel" property="processorsTel"/>
+		<result column="processorsMail" property="processorsMail"/>
+		<result column="remark" property="remark"/>
+		<result column="deleteFlag" property="deleteFlag"/>
+		<result column="createUserId" property="createUserId"/>
+		<result column="createDate" property="createDate"/>
+		<result column="updateUserId" property="updateUserId"/>
+		<result column="updateDate" property="updateDate"/>
+
+		<collection property="company" ofType="Company">
+			<id column="id" property="id" />
+			<result column="companyCode" property="companyCode" />
+			<result column="companyName" property="companyName" />
+			<result column="legalPerson" property="legalPerson" />
+			<result column="legalPersonID" property="legalPersonID" />
+			<result column="address" property="address" />
+			<result column="registerDate" property="registerDate" />
+			<result column="connectName" property="connectName" />
+			<result column="connectPhone" property="connectPhone" />
+		</collection>
+	</resultMap>
+
+	<update id="update" parameterType="SeedCPLT">
+		update b_seedcomplaint
+		<set>
+			<if test="companyCode!=null and companyCode!=''">
+				companyCode=#{companyCode},
+			</if>
+			<if test="complaintDate!=null ">
+				complaintDate=#{complaintDate},
+			</if>
+			<if test="buySeedsDate!=null ">
+				buySeedsDate=#{buySeedsDate},
+			</if>
+			<if test="complainant!=null and complainant!=''">
+				complainant=#{complainant},
+			</if>
+			<if test="complainantSex!=null and complainantSex!=''">
+				complainantSex=#{complainantSex},
+			</if>
+			<if test="complainantTel!=null and complainantTel!=''">
+				complainantTel=#{complainantTel},
+			</if>
+			<if test="complainantMail!=null and complainantMail!=''">
+				complainantMail=#{complainantMail},
+			</if>
+			<if test="complaintContent!=null and complaintContent!=''">
+				complaintContent=#{complaintContent},
+			</if>
+			<if test="settleStatus!=null and settleStatus!=''">
+				settleStatus=#{settleStatus},
+			</if>
+
+			<if test="processMode!=null and processMode!=''">
+				processMode=#{processMode},
+			</if>
+			<if test="processResult!=null and processResult!=''">
+				processResult=#{processResult},
+			</if>
+			<if test="productionWeight!=null and productionWeight!=''">
+				productionWeight=#{productionWeight},
+			</if>
+			<if test="blackListTimeLimit!=null and blackListTimeLimit!='' ">
+				blackListTimeLimit=#{blackListTimeLimit},
+			</if>
+			<if test="blackListEndDate!=null ">
+				blackListEndDate=#{blackListEndDate},
+			</if>
+			<if test="settleDate!=null ">
+				settleDate=#{settleDate},
+			</if>
+			<if test=" processor!=null and processor!=''">
+				processor=#{processor},
+			</if>
+			<if test=" processorsTel!=null and processorsTel!=''">
+				processorsTel=#{processorsTel},
+			</if>
+			<if test=" processorsMail!=null and processorsMail!=''">
+				processorsMail=#{processorsMail},
+			</if>
+			<if test=" remark!=null and remark!=''">
+				remark=#{remark},
+			</if>
+			<if test=" deleteFlag!=null and deleteFlag!=''">
+				deleteFlag=#{deleteFlag},
+			</if>
+			<if test=" createUserId!=null and createUserId!=''">
+				createUserId=#{createUserId},
+			</if>
+			<if test=" createDate!=null ">
+				createDate=#{createDate},
+			</if>
+			<if test=" updateUserId!=null and updateUserId!=''">
+				updateUserId=#{updateUserId},
+			</if>
+			<if test=" updateDate!=null ">
+				updateDate=#{updateDate},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+
+	<insert id="insert" parameterType="SeedCPLT" >
+		insert into b_seedcomplaint
+		values (default,#{companyCode},#{complaintDate},#{buySeedsDate},#{complainant},#{complainantSex},#{complainantTel}
+		,#{complainantMail},#{complaintContent},'01',#{processMode},#{processResult},#{productionWeight},#{blackListTimeLimit},
+		#{blackListEndDate},#{settleDate},#{processor},#{processorsTel},#{processorsMail},#{remark},'N',#{createUserId},#{createDate},#{updateUserId},#{updateDate})
+	</insert>
+	<update id="updateFile" parameterType="SeedCPLT" useGeneratedKeys="true" keyProperty="id">
+		update b_seedcomplaint
+		<set>
+			<if test="companyCode!=null and companyCode!=''">
+				companyCode=#{companyCode},
+			</if>
+			<if test="complaintDate!=null ">
+				complaintDate=#{complaintDate},
+			</if>
+			<if test="buySeedsDate!=null ">
+				buySeedsDate=#{buySeedsDate},
+			</if>
+			<if test="complainant!=null and complainant!=''">
+				complainant=#{complainant},
+			</if>
+			<if test="complainantSex!=null and complainantSex!=''">
+				complainantSex=#{complainantSex},
+			</if>
+			<if test="complainantTel!=null and complainantTel!=''">
+				complainantTel=#{complainantTel},
+			</if>
+			<if test="complainantMail!=null and complainantMail!=''">
+				complainantMail=#{complainantMail},
+			</if>
+			<if test="complaintContent!=null and complaintContent!=''">
+				complaintContent=#{complaintContent},
+			</if>
+			<if test="settleStatus!=null and settleStatus!=''">
+				settleStatus=#{settleStatus},
+			</if>
+
+			<if test="processMode!=null and processMode!=''">
+				processMode=#{processMode},
+			</if>
+			<if test="processResult!=null and processResult!=''">
+				processResult=#{processResult},
+			</if>
+			<if test="productionWeight!=null and productionWeight!=''">
+				productionWeight=#{productionWeight},
+			</if>
+			<if test="blackListTimeLimit!=null and blackListTimeLimit!='' ">
+				blackListTimeLimit=#{blackListTimeLimit},
+			</if>
+			<if test="blackListEndDate!=null ">
+				blackListEndDate=#{blackListEndDate},
+			</if>
+			<if test="settleDate!=null ">
+				settleDate=#{settleDate},
+			</if>
+			<if test=" processor!=null and processor!=''">
+				processor=#{processor},
+			</if>
+			<if test=" processorsTel!=null and processorsTel!=''">
+				processorsTel=#{processorsTel},
+			</if>
+			<if test=" processorsMail!=null and processorsMail!=''">
+				processorsMail=#{processorsMail},
+			</if>
+			<if test=" remark!=null and remark!=''">
+				remark=#{remark},
+			</if>
+			<if test=" deleteFlag!=null and deleteFlag!=''">
+				deleteFlag=#{deleteFlag},
+			</if>
+			<if test=" createUserId!=null and createUserId!=''">
+				createUserId=#{createUserId},
+			</if>
+			<if test=" createDate!=null ">
+				createDate=#{createDate},
+			</if>
+			<if test=" updateUserId!=null and updateUserId!=''">
+				updateUserId=#{updateUserId},
+			</if>
+			<if test=" updateDate!=null ">
+				updateDate=#{updateDate},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+<!--	<insert id="insertFile" parameterType="SeedCPLT" useGeneratedKeys="true" keyProperty="id">-->
+<!--		insert into b_seedcomplaint-->
+<!--		values (default,#{companyCode},#{complaintDate},#{buySeedsDate},#{complainant},#{complainantSex},#{complainantTel}-->
+<!--		,#{complainantMail},#{complaintContent},'01',#{processMode},#{processResult},#{productionWeight},#{blackListTimeLimit},-->
+<!--		#{blackListEndDate},#{settleDate},#{processor},#{processorsTel},#{processorsMail},#{remark},'N',#{createUserId},#{createDate},#{updateUserId},#{updateDate})-->
+<!--	</insert>-->
+
+
+	<select id="count" resultType="int" parameterType="java.util.Map">
+		select count(*) from b_seedcomplaint left join m_company on b_seedcomplaint.companyCode=m_company.companyCode
+
+		<where>
+			<if test="complaintBeginDate!=null and complaintBeginDate !=''">
+				and b_seedcomplaint.complaintDate  >= #{complaintBeginDate}
+			</if>
+			<if test="complaintEndDate!=null and complaintEndDate !=''">
+				<![CDATA[
+					and b_seedcomplaint.complaintDate  <= #{complaintEndDate}
+				]]>
+			</if>
+
+			<if test="settleBeginDate!=null and settleBeginDate !=''">
+				and b_seedcomplaint.settleDate  >= #{settleBeginDate}
+			</if>
+			<if test="settleEndDate!=null and settleEndDate !=''">
+				<![CDATA[
+					and b_seedcomplaint.settleDate  <= #{settleEndDate}
+				]]>
+			</if>
+			<if test="companyCode!=null and companyCode !=''">
+				and  b_seedcomplaint.companyCode = #{companyCode}
+			</if>
+			<if test="settleStatus!=null and settleStatus !=''">
+				and b_seedcomplaint.settleStatus=#{settleStatus}
+			</if>
+			and b_seedcomplaint.deleteFlag='N'
+		</where>
+	</select>
+
+	<select id="select" resultMap="seedCPLTMapper" parameterType="java.util.Map">
+		select * from b_seedcomplaint left join m_company on b_seedcomplaint.companyCode=m_company.companyCode
+
+		<where>
+			<if test="complaintBeginDate!=null and complaintBeginDate !=''">
+				and b_seedcomplaint.complaintDate  >= #{complaintBeginDate}
+			</if>
+			<if test="complaintEndDate!=null and complaintEndDate !=''">
+				<![CDATA[
+					and b_seedcomplaint.complaintDate  <= #{complaintEndDate}
+				]]>
+			</if>
+
+			<if test="settleBeginDate!=null and settleBeginDate !=''">
+				and b_seedcomplaint.settleDate  >= #{settleBeginDate}
+			</if>
+			<if test="settleEndDate!=null and settleEndDate !=''">
+				<![CDATA[
+					and b_seedcomplaint.settleDate  <= #{settleEndDate}
+				]]>
+			</if>
+			<if test="companyCode!=null and companyCode !=''">
+				and  b_seedcomplaint.companyCode = #{companyCode}
+			</if>
+			<if test="settleStatus!=null and settleStatus !=''">
+				and b_seedcomplaint.settleStatus=#{settleStatus}
+			</if>
+
+			and b_seedcomplaint.deleteFlag='N'
+		</where>
+		<if test="index!=null and index>0">
+			limit #{index},#{pageSize}
+		</if>
+	</select>
+
+	<select id="selectById" resultMap="seedCPLTMapper" parameterType="int">
+		select * from b_seedcomplaint left join m_company on b_seedcomplaint.companyCode=m_company.companyCode
+		where b_seedcomplaint.id = #{id} and b_seedcomplaint.deleteFlag='N'
+	</select>
+
+
+</mapper>

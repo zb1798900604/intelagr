@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="intelagr:Web exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="622accbb-5f71-4c6f-8a86-a7482d5bd9dd" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="intelagr" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>return form_check()</find>
+      <find>onSubmit</find>
+      <find>form_check(</find>
+      <find>view</find>
+      <find>viewInfo</find>
+      <find>from</find>
+      <find>userform</find>
+      <find>detail</find>
+      <find>addDialog</find>
+      <find>settleData</find>
+      <find>settle</find>
+      <find>list</find>
+      <find>form_check</find>
+      <find>bottom</find>
+      <find>data</find>
+      <find>settleValidate</find>
+      <find>nowrap</find>
+      <find>recallReason</find>
+      <find>companyCode</find>
+      <find>recall</find>
+      <find>userID</find>
+      <find>companyCode1</find>
+      <find>$.ajax</find>
+      <find>ajax</find>
+      <find>option</find>
+      <find>addFrom</find>
+      <find>seedCPLT</find>
+      <find>seedCPLTViewInfo</find>
+      <find>bizType</find>
+      <find>uploadInfo</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>Z:\IDEAWork\intelagr\src\main\webapp\pages\company</dir>
+    </dirStrings>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="F:/maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="F:\maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ROiUKMQuExzFN8m02430tzksOX" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.oracle.intelagr.common" />
+      <recent name="com.oracle.intelagr.service.impl" />
+      <recent name="com.oracle.intelagr.service" />
+      <recent name="com.oracle.intelagr.mapper" />
+      <recent name="com.oracle.intelagr.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\IDEAWork\intelagr\src\main\webapp\pages\companycplt" />
+      <recent name="Z:\IDEAWork\intelagr\src\main\webapp\pages\seedcplt" />
+      <recent name="Z:\IDEAWork\intelagr\src\main\resources\com\oracle\intelagr\mapper" />
+      <recent name="Z:\IDEAWork\intelagr\src\main\webapp\pages\role" />
+      <recent name="Z:\IDEAWork\intelagr\src\main\webapp\pages\user" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.22" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="intelagr:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_intelagr_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63744" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+        <EnvironmentVariables>
+          <option name="NAME" value="JAVA_TOOL_OPTIONS" />
+          <option name="VALUE" value="-Dfile.encoding=UTF-8" />
+          <option name="IS_PREDEFINED" value="false" />
+        </EnvironmentVariables>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="intelagr:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="622accbb-5f71-4c6f-8a86-a7482d5bd9dd" name="Default" comment="" />
+      <created>1567574437884</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567574437884</updated>
+      <workItem from="1567574444755" duration="4098000" />
+      <workItem from="1567739935396" duration="1556000" />
+      <workItem from="1567746707968" duration="8799000" />
+      <workItem from="1567927667376" duration="875000" />
+      <workItem from="1567932950783" duration="140000" />
+      <workItem from="1567989093442" duration="21497000" />
+      <workItem from="1568022480141" duration="1710000" />
+      <workItem from="1568024210390" duration="1293000" />
+      <workItem from="1568075505323" duration="20348000" />
+      <workItem from="1568105775603" duration="4192000" />
+      <workItem from="1568178908437" duration="8519000" />
+      <workItem from="1568192115358" duration="2532000" />
+      <workItem from="1568270939566" duration="1068000" />
+      <workItem from="1568512856057" duration="33000" />
+      <workItem from="1568592625788" duration="6237000" />
+      <workItem from="1568684903981" duration="2715000" />
+      <workItem from="1568695500239" duration="2974000" />
+      <workItem from="1568699295875" duration="8312000" />
+      <workItem from="1568710418823" duration="8977000" />
+      <workItem from="1568764998921" duration="8522000" />
+      <workItem from="1568774004335" duration="4380000" />
+      <workItem from="1568783155989" duration="12230000" />
+      <workItem from="1568851971159" duration="16657000" />
+      <workItem from="1568883424367" duration="3605000" />
+      <workItem from="1568937802947" duration="5921000" />
+      <workItem from="1568955928103" duration="12215000" />
+      <workItem from="1568969735891" duration="1657000" />
+      <workItem from="1569197231314" duration="27070000" />
+      <workItem from="1569228727502" duration="5497000" />
+      <workItem from="1569280106274" duration="27635000" />
+      <workItem from="1569315154876" duration="3359000" />
+      <workItem from="1569369097389" duration="1080000" />
+      <workItem from="1569370292564" duration="19916000" />
+      <workItem from="1569456323298" duration="10487000" />
+      <workItem from="1569474390684" duration="8215000" />
+      <workItem from="1569542680838" duration="325000" />
+      <workItem from="1569543228759" duration="270000" />
+      <workItem from="1569544562859" duration="558000" />
+      <workItem from="1569545298446" duration="239000" />
+      <workItem from="1569545575719" duration="72000" />
+      <workItem from="1569545667843" duration="10315000" />
+      <workItem from="1569650899381" duration="643000" />
+      <workItem from="1569720880719" duration="304000" />
+      <workItem from="1570503178517" duration="59000" />
+      <workItem from="1570611754428" duration="1352000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)map).entrySet().toArray()[0]).getKey()" custom="java.util.LinkedHashMap.Entry,org.springframework.validation.support.BindingAwareModelMap" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

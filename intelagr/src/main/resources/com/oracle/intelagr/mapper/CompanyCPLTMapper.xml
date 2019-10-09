@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.intelagr.mapper.CompanyCPLTMapper">
+	<resultMap type="CompanyCPLT" id="companyCPLTMapper">
+		<id column="id" property="id" />
+		<result column="complaintDate" property="complaintDate" />
+		<result column="complainant" property="complainant" />
+		<result column="complainantSex" property="complainantSex" />
+		<result column="complainantTel" property="complainantTel" />
+		<result column="complainantMail" property="complainantMail" />
+		<result column="complaintContent" property="complaintContent" />
+		<result column="settleStatus" property="settleStatus" />
+		<result column="companyCode" property="companyCode" />
+		<result column="processMode" property="processMode"/>
+		<result column="processResult" property="processResult"/>
+		<result column="blackListTimeLimit" property="blackListTimeLimit"/>
+		<result column="blackListEndDate" property="blackListEndDate"/>
+		<result column="productionBatch" property="productionBatch"/>
+		<result column="productCode" property="productCode"/>
+		<result column="rejectReason" property="rejectReason"/>
+		<result column="settleDate" property="settleDate"/>
+		<result column="processor" property="processor"/>
+		<result column="processorsTel" property="processorsTel"/>
+		<result column="processorsMail" property="processorsMail"/>
+		<result column="remark" property="remark"/>
+		<result column="deleteFlag" property="deleteFlag"/>
+		<result column="createUserId" property="createUserId"/>
+		<result column="createDate" property="createDate"/>
+		<result column="updateUserId" property="updateUserId"/>
+		<result column="updateDate" property="updateDate"/>
+<!--		<collection property="commonData" resultMap="com.oracle.intelagr.mapper.CommonDataMapper.commonDataMapper" ofType="CommonData"></collection>-->
+		<association property="reCallRecord"   javaType="ReCallRecord" column="id">
+			<id column="id" property="id" />
+			<result column="companyCode" property="companyCode" />
+			<result column="processor" property="processor" />
+			<result column="settleDate" property="settleDate" />
+			<result column="batchNo" property="batchNo" />
+			<result column="productCode" property="productCode" />
+			<result column="recallReason" property="recallReason" />
+			<result column="remark" property="remark" />
+			<result column="deleteFlag" property="deleteFlag" />
+			<result column="createUserId" property="createUserId"/>
+			<result column="createDate" property="createDate"/>
+			<result column="updateUserId" property="updateUserId"/>
+			<result column="updateDate" property="updateDate"/>
+		</association>
+<!--		<association property="blackList"   javaType="BlackList" column="id">-->
+<!--			<id column="id" property="id" />-->
+<!--			<result column="companyCode" property="companyCode" />-->
+<!--			<result column="blackListCount" property="blackListCount" />-->
+<!--			<result column="blackListEndDate" property="blackListEndDate" />-->
+<!--			<result column="processor" property="processor" />-->
+<!--			<result column="settleDate" property="settleDate" />-->
+<!--			<result column="blackListTimeLimit" property="blackListTimeLimit" />-->
+<!--			<result column="blackListReason" property="blackListReason" />-->
+<!--			<result column="remark" property="remark"/>-->
+<!--			<result column="deleteFlag" property="deleteFlag"/>-->
+<!--			<result column="createUserId" property="createUserId"/>-->
+<!--			<result column="createDate" property="createDate"/>-->
+<!--			<result column="updateUserId" property="updateUserId"/>-->
+<!--			<result column="updateDate" property="updateDate"/>-->
+<!--		</association>-->
+
+	</resultMap>
+
+	<update id="update" parameterType="CompanyCPLT">
+		update b_companycomplaint
+		<set>
+			<if test="complaintDate!=null ">
+				complaintDate=#{complaintDate},
+			</if>
+			<if test="complainant!=null and complainant!=''">
+				complainant=#{complainant},
+			</if>
+			<if test="complainantSex!=null and complainantSex!=''">
+				complainantSex=#{complainantSex},
+			</if>
+			<if test="complainantTel!=null and complainantTel!=''">
+				complainantTel=#{complainantTel},
+			</if>
+			<if test="complainantMail!=null and complainantMail!=''">
+				complainantMail=#{complainantMail},
+			</if>
+			<if test="complaintContent!=null and complaintContent!=''">
+				complaintContent=#{complaintContent},
+			</if>
+			<if test="settleStatus!=null and settleStatus!=''">
+				settleStatus=#{settleStatus},
+			</if>
+			<if test="companyCode!=null and companyCode!=''">
+				companyCode=#{companyCode},
+			</if>
+			<if test="processMode!=null and processMode!=''">
+				processMode=#{processMode},
+			</if>
+			<if test="processResult!=null and processResult!=''">
+				processResult=#{processResult},
+			</if>
+
+			<if test="blackListTimeLimit!=null and blackListTimeLimit!='' ">
+				blackListTimeLimit=#{blackListTimeLimit},
+			</if>
+			<if test="blackListEndDate!=null ">
+				blackListEndDate=#{blackListEndDate},
+			</if>
+			<if test="productionBatch!=null and productionBatch!=''">
+				productionBatch=#{productionBatch},
+			</if>
+			<if test="productCode!=null and productCode!=''">
+				productCode=#{productCode},
+			</if>
+			<if test="rejectReason!=null and rejectReason!=''">
+				rejectReason=#{rejectReason},
+			</if>
+			<if test=" settleDate!=null ">
+				settleDate=#{settleDate},
+			</if>
+			<if test=" processor!=null and processor!=''">
+				processor=#{processor},
+			</if>
+			<if test=" processorsTel!=null and processorsTel!=''">
+				processorsTel=#{processorsTel},
+			</if>
+			<if test=" processorsMail!=null and processorsMail!=''">
+				processorsMail=#{processorsMail},
+			</if>
+			<if test=" remark!=null and remark!=''">
+				remark=#{remark},
+			</if>
+			<if test=" deleteFlag!=null and deleteFlag!=''">
+				deleteFlag=#{deleteFlag},
+			</if>
+			<if test=" createUserId!=null and createUserId!=''">
+				createUserId=#{createUserId},
+			</if>
+			<if test=" createDate!=null ">
+				createDate=#{createDate},
+			</if>
+			<if test=" updateUserId!=null and updateUserId!=''">
+				updateUserId=#{updateUserId},
+			</if>
+			<if test=" updateDate!=null ">
+				updateDate=#{updateDate},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+	<update id="updateFile" parameterType="CompanyCPLT" useGeneratedKeys="true" keyProperty="id">
+		update b_companycomplaint
+		<set>
+			<if test="complaintDate!=null ">
+				complaintDate=#{complaintDate},
+			</if>
+			<if test="complainant!=null and complainant!=''">
+				complainant=#{complainant},
+			</if>
+			<if test="complainantSex!=null and complainantSex!=''">
+				complainantSex=#{complainantSex},
+			</if>
+			<if test="complainantTel!=null and complainantTel!=''">
+				complainantTel=#{complainantTel},
+			</if>
+			<if test="complainantMail!=null and complainantMail!=''">
+				complainantMail=#{complainantMail},
+			</if>
+			<if test="complaintContent!=null and complaintContent!=''">
+				complaintContent=#{complaintContent},
+			</if>
+			<if test="settleStatus!=null and settleStatus!=''">
+				settleStatus=#{settleStatus},
+			</if>
+			<if test="companyCode!=null and companyCode!=''">
+				companyCode=#{companyCode},
+			</if>
+			<if test="processMode!=null and processMode!=''">
+				processMode=#{processMode},
+			</if>
+			<if test="processResult!=null and processResult!=''">
+				processResult=#{processResult},
+			</if>
+
+			<if test="blackListTimeLimit!=null and blackListTimeLimit!='' ">
+				blackListTimeLimit=#{blackListTimeLimit},
+			</if>
+			<if test="blackListEndDate!=null ">
+				blackListEndDate=#{blackListEndDate},
+			</if>
+			<if test="productionBatch!=null and productionBatch!=''">
+				productionBatch=#{productionBatch},
+			</if>
+			<if test="productCode!=null and productCode!=''">
+				productCode=#{productCode},
+			</if>
+			<if test="rejectReason!=null and rejectReason!=''">
+				rejectReason=#{rejectReason},
+			</if>
+			<if test=" settleDate!=null ">
+				settleDate=#{settleDate},
+			</if>
+			<if test=" processor!=null and processor!=''">
+				processor=#{processor},
+			</if>
+			<if test=" processorsTel!=null and processorsTel!=''">
+				processorsTel=#{processorsTel},
+			</if>
+			<if test=" processorsMail!=null and processorsMail!=''">
+				processorsMail=#{processorsMail},
+			</if>
+			<if test=" remark!=null and remark!=''">
+				remark=#{remark},
+			</if>
+			<if test=" deleteFlag!=null and deleteFlag!=''">
+				deleteFlag=#{deleteFlag},
+			</if>
+			<if test=" createUserId!=null and createUserId!=''">
+				createUserId=#{createUserId},
+			</if>
+			<if test=" createDate!=null ">
+				createDate=#{createDate},
+			</if>
+			<if test=" updateUserId!=null and updateUserId!=''">
+				updateUserId=#{updateUserId},
+			</if>
+			<if test=" updateDate!=null ">
+				updateDate=#{updateDate},
+			</if>
+		</set>
+		where id=#{id}
+	</update>
+	<insert id="insert" parameterType="CompanyCPLT">
+		insert into b_companycomplaint
+		values (default,#{complaintDate},#{complainant},#{complainantSex},#{complainantTel},#{complainantMail},#{complaintContent},'01'
+		,#{companyCode},#{processMode},#{processResult},#{blackListTimeLimit},#{blackListEndDate},#{productionBatch},#{productCode},
+		#{rejectReason},#{settleDate},#{processor},#{processorsTel},#{processorsMail},#{remark},'N',#{createUserId},#{createDate},#{updateUserId},#{updateDate})
+	</insert>
+	<select id="selectAll" resultMap="companyCPLTMapper" parameterType="java.util.Map">
+		select * from b_companycomplaint where deleteFlag='N'
+	</select>
+
+	<select id="count" resultType="int" parameterType="java.util.Map">
+		select count(*) from b_companycomplaint
+
+		<where>
+			<if test="complaintBeginDate!=null and complaintBeginDate !=''">
+				and complaintDate  >= #{complaintBeginDate}
+			</if>
+			<if test="complaintEndDate!=null and complaintEndDate !=''">
+				<![CDATA[
+					and complaintDate  <= #{complaintEndDate}
+				]]>
+			</if>
+
+			<if test="settleBeginDate!=null and settleBeginDate !=''">
+				and settleDate  >= #{settleBeginDate}
+			</if>
+			<if test="settleEndDate!=null and settleEndDate !=''">
+				<![CDATA[
+					and settleDate  <= #{settleEndDate}
+				]]>
+			</if>
+
+			<if test="settleStatus!=null and settleStatus !=''">
+				and settleStatus=#{settleStatus}
+			</if>
+			and deleteFlag='N'
+		</where>
+	</select>
+
+	<select id="select" resultMap="companyCPLTMapper" parameterType="java.util.Map">
+		select * from b_companycomplaint
+
+		<where>
+			<if test="complaintBeginDate!=null and complaintBeginDate !=''">
+				and complaintDate  >= #{complaintBeginDate}
+			</if>
+			<if test="complaintEndDate!=null and complaintEndDate !=''">
+				<![CDATA[
+					and complaintDate  <= #{complaintEndDate}
+				]]>
+
+			</if>
+
+			<if test="settleBeginDate!=null and settleBeginDate !=''">
+				and settleDate  >= #{settleBeginDate}
+			</if>
+			<if test="settleEndDate!=null and settleEndDate !=''">
+				<![CDATA[
+					and settleDate  <= #{settleEndDate}
+				]]>
+			</if>
+
+			<if test="settleStatus!=null and settleStatus !=''">
+				and settleStatus=#{settleStatus}
+			</if>
+			and deleteFlag='N'
+		</where>
+		<if test="index!=null and index>0">
+			limit #{index},#{pageSize}
+		</if>
+	</select>
+
+	<select id="selectById" resultMap="companyCPLTMapper" parameterType="int">
+		select * from b_companycomplaint where id = #{id} and deleteFlag='N'
+	</select>
+
+
+</mapper>

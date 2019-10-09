@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.intelagr.mapper.BlackListDMapper">
+	<resultMap type="BlackListD" id="blackListDMapper">
+		<id column="id" property="id" />
+		<result column="companyCode" property="companyCode" />
+		<result column="processor" property="processor" />
+		<result column="settleDate" property="settleDate" />
+		<result column="blackListTimeLimit" property="blackListTimeLimit" />
+		<result column="blackListEndDate" property="blackListEndDate" />
+		<result column="blackListReason" property="blackListReason" />
+		<result column="remark" property="remark"/>
+		<result column="deleteFlag" property="deleteFlag"/>
+		<result column="createUserId" property="createUserId"/>
+		<result column="createDate" property="createDate"/>
+		<result column="updateUserId" property="updateUserId"/>
+		<result column="updateDate" property="updateDate"/>
+	</resultMap>
+
+	<insert id="insert" parameterType="BlackListD">
+		insert into b_blacklistmanaged
+		values (default,#{companyCode},#{processor},#{settleDate},#{blackListTimeLimit},#{blackListEndDate},#{blackListReason}
+		,#{remark},'N',#{createUserId},#{createDate},#{updateUserId},#{updateDate})
+	</insert>
+
+
+
+</mapper>

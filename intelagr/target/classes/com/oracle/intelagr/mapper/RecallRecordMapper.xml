@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oracle.intelagr.mapper.RecallRecordMapper"><!--namespace="com.oracle.intelagr.mapper.RecallRecordMapper"是mapper接口的名-->
+    <resultMap type="ReCallRecord" id="recallRecordMapper">
+        <id column="id" property="id" />
+        <result column="companyCode" property="companyCode" />
+        <result column="processor" property="processor" />
+        <result column="settleDate" property="settleDate" />
+        <result column="batchNo" property="batchNo" />
+        <result column="productCode" property="productCode" />
+        <result column="recallReason" property="recallReason" />
+        <result column="remark" property="remark" />
+        <result column="deleteFlag" property="deleteFlag" />
+
+        <result column="createUserId" property="createUserId"/>
+        <result column="createDate" property="createDate"/>
+        <result column="updateUserId" property="updateUserId"/>
+        <result column="updateDate" property="updateDate"/>
+
+        <collection property="company" ofType="Company">
+            <id column="id" property="id" />
+            <result column="companyCode" property="companyCode" />
+            <result column="companyName" property="companyName" />
+            <result column="legalPerson" property="legalPerson" />
+            <result column="legalPersonID" property="legalPersonID" />
+            <result column="address" property="address" />
+            <result column="registerDate" property="registerDate" />
+            <result column="connectName" property="connectName" />
+            <result column="connectPhone" property="connectPhone" />
+        </collection>
+
+        <collection property="product" ofType="Product">
+            <id column="id" property="id" />
+            <result column="companyCode" property="companyCode" />
+            <result column="productCode" property="productCode" />
+            <result column="productName" property="productName" />
+            <result column="unit" property="unit" />
+            <result column="weight" property="weight" />
+            <result column="remark" property="remark" />
+            <result column="deleteFlag" property="deleteFlag" />
+            <result column="createUserId" property="createUserId"/>
+            <result column="createDate" property="createDate"/>
+            <result column="updateUserId" property="updateUserId"/>
+            <result column="updateDate" property="updateDate"/>
+        </collection>
+
+    </resultMap>
+
+
+    <select id="select" resultMap="recallRecordMapper" parameterType="java.util.Map">
+        select * from b_recallrecord left join m_company on b_recallrecord.companyCode=m_company.companyCode
+        LEFT JOIN m_product on b_recallrecord.productCode=m_product.productCode
+        <where>
+            <if test="beginDate!=null and beginDate !=''">
+                and b_recallrecord.settleDate  >= #{beginDate}
+            </if>
+            <if test="endDate!=null and endDate !=''">
+                <![CDATA[
+					and b_recallrecord.settleDate  <= #{endDate}
+				]]>
+            </if>
+
+            <if test="batchNo!=null and batchNo !=''">
+                and b_recallrecord.batchNo=#{batchNo}
+            </if>
+
+            <if test="companyCode!=null and companyCode !=''">
+                and  b_recallrecord.companyCode = #{companyCode}
+            </if>
+
+            and b_recallrecord.deleteFlag='N'
+        </where>
+        <if test="index!=null and index>0">
+            limit #{index},#{pageSize}
+        </if>
+    </select>
+
+
+    <select id="count" resultType="int" parameterType="java.util.Map">
+        select count(*) from b_recallrecord left join m_company on b_recallrecord.companyCode=m_company.companyCode
+        LEFT JOIN m_product on b_recallrecord.productCode=m_product.productCode
+        <where>
+            <if test="beginDate!=null and beginDate !=''">
+                and b_recallrecord.settleDate  >= #{beginDate}
+            </if>
+            <if test="endDate!=null and endDate !=''">
+                <![CDATA[
+					and b_recallrecord.settleDate  <= #{endDate}
+				]]>
+            </if>
+
+            <if test="batchNo!=null and batchNo !=''">
+                and b_recallrecord.batchNo=#{batchNo}
+            </if>
+
+            <if test="companyCode!=null and companyCode !=''">
+                and  b_recallrecord.companyCode=#{companyCode}
+            </if>
+            and b_recallrecord.deleteFlag='N'
+        </where>
+    </select>
+
+    <insert id="insert" parameterType="ReCallRecord">
+		insert into b_recallrecord
+		values (default,#{companyCode},#{processor},#{settleDate},#{batchNo},#{productCode},#{recallReason}
+		,#{remark},'N',#{createUserId},#{createDate},#{updateUserId},#{updateDate})
+	</insert>
+
+</mapper>
